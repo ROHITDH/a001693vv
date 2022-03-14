@@ -22,8 +22,7 @@ def detect_type(m: Message):
 
 
 @StreamBot.on_message(
-    filters.private
-    & (
+     (
         filters.document
         | filters.video
         | filters.audio
