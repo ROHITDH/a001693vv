@@ -42,12 +42,14 @@ async def media_receive_handler(_, m: Message):
     short_link = f"{Var.URL}{get_unique_id(log_msg)}{log_msg.message_id}"
     logging.info(f"Generated link: {stream_link} for {m.from_user.first_name}")
     await m.reply_text(
-        text="<code>{}</code> (<a href='{}'>shortened</a>)".format(
-            stream_link, short_link
+        #text="<code>{}</code> (<a href='{}'>shortened</a>)".format(
+        text="<code>{}</code>".format(
+        #    stream_link, short_link
+            stream_link
         ),
         quote=True,
         parse_mode="html",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Open", url=stream_link)]]
+        #reply_markup=InlineKeyboardMarkup(
+        #    [[InlineKeyboardButton("Open", url=stream_link)]]
         ),
     )
