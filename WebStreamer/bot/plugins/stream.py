@@ -51,5 +51,5 @@ async def media_receive_handler(_, m: Message):
         parse_mode="html",
         #reply_markup=InlineKeyboardMarkup(
         #    [[InlineKeyboardButton("Open", url=stream_link)]]
-        ),
+        #),
     )
